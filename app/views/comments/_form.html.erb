@@ -1,0 +1,10 @@
+<%= form_with(model: comment, local: true) do |form| %>
+  <div class="input-group mb-3">
+    <%= form.text_field :message, id: :comment_message, class: "form-control", placeholder: "Type your message..." %>
+    <div class="input-group-append">
+      <%= form.submit "Send", class: "btn btn-outline-secondary" %>
+    </div>
+  </div>
+
+  <%= form.hidden_field :topic_id, id: :comment_topic_id %>
+<% end %>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tournament Test</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body id="auth-body">
+  <div id='content'>
+    <div id='auth-panel-wrap'>
+      <div id='auth-panel'>
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

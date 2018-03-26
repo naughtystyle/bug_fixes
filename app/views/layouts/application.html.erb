@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tournament Test</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="row full-height no-margin">
+      <div id="sidebar" class="col-3">
+        <%= render 'layouts/sidebar' %>
+      </div>
+      <div class="col-9">
+        <%= render 'layouts/header' %>
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+
+</html>

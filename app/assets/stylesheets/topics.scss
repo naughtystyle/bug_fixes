@@ -1,0 +1,20 @@
+#topic-page {
+  #comments {
+    height: 600px;
+    padding: 8px 16px;
+    overflow-y: auto;
+
+    .comment {
+      width: 90%;
+    }
+  }
+  #message-bar {
+    margin-top: 4px;
+  }
+}
+
+#new-topic-page {
+  form {
+    padding: 8px 16px;
+  }
+}

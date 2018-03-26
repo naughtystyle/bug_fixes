@@ -1,0 +1,23 @@
+<div id="topic-page">
+  <h3><%= @topic.name %></h3>
+  <div id="comments">
+    <% @topic.comments.each do |comment| %>
+      <div class="row">
+        <div class="col-12">
+          <% if comment.user == current_user %>
+            <div class="comment alert alert-primary">
+              <%= comment.message %>
+            </div>
+          <% else %>
+            <div class="comment alert alert-success float-right">
+              <%= comment.message %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div id="message-bar">
+    <%= render 'comments/form', comment: Comment.new(topic: @topic) %>
+  </div>
+</div>
